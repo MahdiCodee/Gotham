@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dark Knight</title>
+    <link rel="icon" href="batman.png">
+</head>
+
+<style>
+
+    body {
+        width: 99%;
+        height: 95vh;
+        background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url(gotham.jpg);
+        text-align: center;
+        justify-content: space-around;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .container img {
+        width: 350px;
+        height: 200px;
+        cursor: pointer;
+        margin: 5rem;
+    }
+
+</style>
+
+<body id="body">
+
+    <div class="container">
+        <img id="photo" src="batman.png">
+    </div>
+
+</body>
+
+<script>
+
+    let img = document.getElementById("photo");
+    let body = document.getElementById("body");
+
+    img.addEventListener("mouseenter", () => {
+        body.style.backgroundImage = "url(gotham.jpg)";
+    });
+
+    img.addEventListener("mouseout", () => {
+        body.style.backgroundImage = "";
+    });
+
+</script>
+
+</html>
